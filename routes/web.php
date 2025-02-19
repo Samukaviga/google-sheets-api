@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\FileController;
+use App\Http\Controllers\EnviosVisitasController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TrafegoPagoLeadsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,7 +19,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/file', [FileController::class, 'extractSheetData']);
+Route::get('/file', [EnviosVisitasController::class, 'extractSheetData']);
+
+Route::get('/trafego', [TrafegoPagoLeadsController::class , 'extractSheetData']);
 
 
 require __DIR__.'/auth.php';

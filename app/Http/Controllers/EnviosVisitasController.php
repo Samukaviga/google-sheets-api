@@ -6,7 +6,7 @@ use App\Models\EnviosVisitas;
 use App\Services\GoogleSheetService;
 use Illuminate\Http\Request;
 
-class FileController extends Controller
+class EnviosVisitasController extends Controller
 {
     protected $googleSheetService;
 
